@@ -29,13 +29,13 @@ team_2 = set_options()[1]
 @click.option('--choice', prompt=True, type=click.Choice(["1", "2"]))
 def choice_made(choice):
     if choice == "1":
-        team = team_1
+        return(team_1)
     else:
-        team = team_2
+        return(team_2)
 
-    print(team)
 
 if __name__ == "__main__":
     print(f'[1] {team_1}')
     print(f'[2] {team_2}')
-    choice_made()
+    team = choice_made()
+    print(team)
