@@ -37,10 +37,10 @@ def team_choice():
         user_choice = input("Choose [1] or [2]: ")
     if user_choice == "1":
         print(f'You have chosen {team_options[0]}\n')
-        team_choices.append([team_options[0]])
+        team_choices.append([team_options[1]])
     else:
         print(f'You have chosen {team_options[2]}\n')
-        team_choices.append([team_options[2]])
+        team_choices.append([team_options[3]])
 
 def main():
     '''Selects the correct amount of teams, and saves them'''

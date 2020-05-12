@@ -27,7 +27,7 @@ random.shuffle(PLAYER2_TEAMS)
 
 MATCHUPS = []
 for i in range(len(PLAYER1_TEAMS)):
-    MATCHUPS.append([f'MATCHUP {i+1}: {PLAYER1_TEAMS[i]} vs {PLAYER2_TEAMS[i]}'])
+    MATCHUPS.append([f'MATCHUP {i+1}: {PLAYER1_TEAMS[i]}(_,_) vs {PLAYER2_TEAMS[i]}(_,_)'])
 
 with open(f'{PLAYER1}_vs_{PLAYER2}_tournament.csv', 'w') as csvfile:
     csvwriter = csv.writer(csvfile, delimiter=',')
