@@ -5,11 +5,11 @@
 import csv
 import random
 
-PLAYER1 = input('Who is competing today?: ')
+PLAYER1 = input('Who is Player1 today?: ')
 PLAYER1_TEAMS = []
 PLAYER1_FILE = f'{PLAYER1}_choices.csv'
 
-PLAYER2 = input('Who else is competing today?: ')
+PLAYER2 = input('Who is Player2 today?: ')
 PLAYER2_TEAMS = []
 PLAYER2_FILE = f'{PLAYER2}_choices.csv'
 
@@ -27,7 +27,7 @@ random.shuffle(PLAYER2_TEAMS)
 
 MATCHUPS = []
 for i in range(len(PLAYER1_TEAMS)):
-    MATCHUPS.append([f'MATCHUP {i+1}: {PLAYER1_TEAMS[i]}(_,_) vs {PLAYER2_TEAMS[i]}(_,_)'])
+    MATCHUPS.append([f'MATCHUP {i+1}: {PLAYER1_TEAMS[i]}(_&_) vs {PLAYER2_TEAMS[i]}(_&_)'])
 
 with open(f'{PLAYER1}_vs_{PLAYER2}_tournament.csv', 'w') as csvfile:
     csvwriter = csv.writer(csvfile, delimiter=',')
