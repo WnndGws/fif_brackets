@@ -28,9 +28,11 @@ def get_row_count():
 print_matchups()
 count = get_row_count()
 
-with open(f'{PLAYER1}_vs_{PLAYER2}_tournament.csv', 'w') as csvfile:
-    matchup_choice = input(f'Which MATCHUP (1-{count}) are you updating?: ')
-    matchup_choice = int(matchup_choice) - 1
-    score = input('What was the score (in format 0-0)?: ')
+matchup_choice = input(f'Which MATCHUP (1-{count}) are you updating?: ')
+matchup_choice = int(matchup_choice) - 1
+score = input('What was the score (in format 0-0)?: ')
+
+with open(f'{PLAYER1}_vs_{PLAYER2}_tournament.csv', 'r') as [csvfile, tmpfile]:
     csvreader = csv.reader(csvfile, delimiter=',')
-    print(csvreader[matchup_choice])
+    csvwriter = csv.reader(tmpfile, delimiter=',')
+    print(csvreader.readlines()[matchup_choice])
