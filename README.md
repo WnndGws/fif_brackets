@@ -1,6 +1,5 @@
 # fif_brackets
 Generates a Fif bracket for a tournament
- Test 1
 
 
 Test2
