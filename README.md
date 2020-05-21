@@ -1,5 +1,6 @@
 # fif_brackets
 Generates a Fif bracket for a tournament
+ Test 1
 
 # Intended use
 1) Run team_scraper to create csv
