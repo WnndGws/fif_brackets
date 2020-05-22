@@ -28,7 +28,7 @@ for i in range(1,5):
         except:
             pass
 
-with open('../data/teams.csv', 'w') as csvfile:
+with open('data/teams.csv', 'w') as csvfile:
     fieldnames = ['Name', 'League', 'OverAll', 'Index']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()

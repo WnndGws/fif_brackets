@@ -13,7 +13,7 @@ while LOOPS not in ['4', '8', '16']:
 
 def team_selector():
     '''This just chooses two random teams from the csv file'''
-    with open('../data/teams.csv', newline='') as csvfile:
+    with open('data/teams.csv', newline='') as csvfile:
         csvreader = csv.DictReader(csvfile)
         random_team_number_1 = random.randint(1, 120)
         random_team_number_2 = random.randint(1, 120)
@@ -49,7 +49,7 @@ def main():
         team_choice()
         loops += 1
 
-    with open(f'../data/{USER}_choices.csv', 'w') as csvfile:
+    with open(f'data/{USER}_choices.csv', 'w') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')
         csvwriter.writerows(team_choices)
 
